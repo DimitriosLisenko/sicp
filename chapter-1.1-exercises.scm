@@ -12,3 +12,14 @@
 ;; exercise 1.4
 ;; that's pretty cool - so a compound expression can return an *operator* value that is the applied to other expressions
 ;; in this particular case, it will add the absolute value of b to a
+
+;; exercise 1.5
+;; applicative-order (like Scheme)
+;; (test 0 (p))
+;; => (test 0 (p))
+;; => (test 0 (p))
+;; => infinite loop
+;; normal-order (like Haskell I think?)
+;; (test 0 (p))
+;; => (if (= 0 0) 0 (p))
+;; => 0
