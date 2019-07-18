@@ -1,7 +1,7 @@
-;; φ is a solution to φ^2 = φ + 1
-;; φ^2 = φ + 1
-;; => φ = (φ + 1) / φ 
-;; => φ = 1 + (1 / φ )
+;; x^x = 1000
+;; => ln(x^x) = ln(1000)
+;; => x*ln(x) = ln(1000)
+;; => x = ln(1000) / ln(x)
 
 (define tolerance 0.00001)
 (define (fixed-point f first-guess)
