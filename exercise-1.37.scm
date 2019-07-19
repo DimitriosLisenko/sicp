@@ -1,6 +1,6 @@
 (define (stairway-division-recursive numerator-function denominator-function steps)
   (define (stairway-division-internal step)
-    (if (= step steps)
+    (if (> step steps)
         0
         (/
          (numerator-function step)
