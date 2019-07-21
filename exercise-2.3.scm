@@ -1,7 +1,7 @@
 ;; looked at the documentation for loading files since it's not covered in the book yet
 (load "exercise-2.2.scm")
 
-;; to make sure that both representations use the same area + perimeter,
+;; to make sure that all representations use the same area + perimeter,
 ;; we can define two functions:
 ;; 1) rectangle-length-of-shorter-side
 ;; 2) rectangle-length-of-longer-side
