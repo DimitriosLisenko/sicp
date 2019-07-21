@@ -1,6 +1,7 @@
 (define zero (lambda (f) (lambda (x) x)))
 (define (add-1 n)
   (lambda (f) (lambda (x) (f ((n f) x)))))
+(add-1 zero)
 
 ;; one
 ;; => (add-1 zero)
@@ -18,3 +19,20 @@
 ;; to accomplish this, add-1 applies f and x in order to get the inner statement, and then applies f to it,
 ;; and then wraps it back inside λf.λx
 
+;; this applies e.g. f(f(x)) as the x inside f(f(f(x))) to produce f(f(f(f(f(x)))))
+(define (add a b)
+  (lambda (f)
+    (lambda (x)
+      ((a f) ((b f) x))
+      )))
+
+(define (debug num)
+  ((num (lambda (x) (+ x 1))) 0))
+
+(define two (add-1 (add-1 zero)))
+(debug two)
+ 
+(define three (add-1 (add-1 (add-1 zero))))
+(debug three)
+
+(debug (add (add (add two three) three) zero))
