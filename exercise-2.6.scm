@@ -19,6 +19,11 @@
 ;; to accomplish this, add-1 applies f and x in order to get the inner statement, and then applies f to it,
 ;; and then wraps it back inside λf.λx
 
+;; the confusing part for me here is whether f is actually executed, or whether it's just a variable rename of sorts,
+;; i.e. the f inside this lambda is actually the f of the outer lambda
+;; but we don't know the f of the outer lambda yet, so don't actually execute
+;; I think that is indeed the case
+
 ;; this applies e.g. f(f(x)) as the x inside f(f(f(x))) to produce f(f(f(f(f(x)))))
 (define (add a b)
   (lambda (f)
