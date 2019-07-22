@@ -24,8 +24,8 @@
                   (/ 1.0 (lower-bound y)))))
 
 (define (sub-interval x y)
-  (make-interval (- (upper-bound x) (lower-bound y))
-                 (- (lower-bound x) (upper-bound y))))
+  (make-interval (- (lower-bound x) (upper-bound y))
+                 (- (upper-bound x) (lower-bound y))))
 
 (define (print-interval x)
   (newline)
