@@ -1,0 +1,15 @@
+(load "exercise-2.7+2.8.scm")
+
+(define (make-center-percent c p)
+  (let ((w (* c (/ p 100))))
+    (make-interval (- c w) (+ c w))))
+(define (center i)
+  (/ (+ (lower-bound i) (upper-bound i)) 2))
+(define (width i)
+  (/ (- (upper-bound i) (lower-bound i)) 2))
+(define (percent i)
+  (* (/ (width i) (center i)) 100))
+
+(print-interval (make-center-percent 100 5))
+(center (make-center-percent 101 9))
+(percent (make-center-percent 101 9))
