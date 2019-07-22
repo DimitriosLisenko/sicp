@@ -10,6 +10,13 @@
 (define (percent i)
   (abs (* (/ (width i) (center i)) 100)))
 
+(define (print-percent-interval x)
+  (newline)
+  (display (center x))
+  (display " +/- ")
+  (display (percent x))
+  (display "%"))
+
 (print-interval (make-center-percent 100 5))
 (center (make-center-percent 101 9))
 (percent (make-center-percent 101 9))
