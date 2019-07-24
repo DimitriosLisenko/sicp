@@ -14,6 +14,8 @@
                     coin-values))
                 coin-values)))))
 
+;; the order in which these coins are defined does not matter
+;; since cc goes through all possible combinations anyway
 (define us-coins (list 50 25 10 5 1))
 (define uk-coins (list 200 100 50 20 10 5 2 1))
 
