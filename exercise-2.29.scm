@@ -40,6 +40,41 @@
        (balanced? (branch-structure (right-branch mobile)))
        (= (torque (left-branch mobile)) (torque (right-branch mobile))))))
 
-;; (define x (make-mobile (make-branch 1 1) (make-branch 1 1)))
-;; (define y (make-mobile (make-branch 2 5) (make-branch 5 x)))
-;; (balanced? y)
+(define x (make-mobile (make-branch 1 1) (make-branch 1 1)))
+(define y (make-mobile (make-branch 2 5) (make-branch 5 x)))
+(define z (make-mobile (make-branch 3 10) (make-branch 5 x)))
+(total-weight x)
+(total-weight y)
+(total-weight z)
+(balanced? x)
+(balanced? y)
+(balanced? z)
+
+;; redefine make-mobile and make-branch
+(define (make-mobile left right)
+  (cons left right))
+(define (make-branch length structure)
+  (cons length structure))
+
+;; hopefully once we redefine the accessors, shit will just work as before!
+(define (left-branch mobile)
+  (car mobile))
+
+(define (right-branch mobile)
+  (cdr mobile))
+
+(define (branch-length branch)
+  (car branch))
+
+(define (branch-structure branch)
+  (cdr branch))
+
+(define x (make-mobile (make-branch 1 1) (make-branch 1 1)))
+(define y (make-mobile (make-branch 2 5) (make-branch 5 x)))
+(define z (make-mobile (make-branch 3 10) (make-branch 5 x)))
+(total-weight x)
+(total-weight y)
+(total-weight z)
+(balanced? x)
+(balanced? y)
+(balanced? z)
