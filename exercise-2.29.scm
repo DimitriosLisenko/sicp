@@ -18,8 +18,8 @@
 
 (define (branch-weight b)
   (if (pair? (branch-structure b))
-             (total-weight (branch-structure b))
-             (branch-structure b)))
+      (total-weight (branch-structure b))
+      (branch-structure b)))
 
 (define (total-weight mobile)
   (+
