@@ -16,11 +16,12 @@
 (define (branch-structure branch)
   (cadr branch))
 
+(define (branch-weight b)
+  (if (pair? (branch-structure b))
+             (total-weight (branch-structure b))
+             (branch-structure b)))
+
 (define (total-weight mobile)
-  (define (conditional-total-weight branch)
-    (if (pair? (branch-structure branch))
-               (total-weight (branch-structure branch))
-               (branch-structure branch)))
   (+
-   (conditional-total-weight (left-branch mobile))
-   (conditional-total-weight (right-branch mobile))))
+   (branch-weight (left-branch mobile))
+   (branch-weight (right-branch mobile))))
