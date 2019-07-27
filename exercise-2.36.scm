@@ -12,5 +12,6 @@
 
 ;; tricky dicky little thing I'm not meant to know about yet in the book:
 ;; sticking a quote before how the interpreter represents a list actually makes that list
-(define s '((1 2 3) (4 5 6) (7 8 9) (10 11 12)))
-(accumulate-n + 0 s)
+;; commenting these out so I can include them in other files
+;; (define s '((1 2 3) (4 5 6) (7 8 9) (10 11 12)))
+;; (accumulate-n + 0 s)
