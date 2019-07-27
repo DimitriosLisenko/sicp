@@ -24,3 +24,8 @@
 ;; fold-right will apply the initial as the RHS of op and the rightmost element as the LHS of op and kinda smash it rightwards
 ;; so e.g. (fold-right list '() (list 1 2 3))
 ;; can be visualised as (1 <- (2 <- (3 <- '()))) where -> is my awesome visual smash operator
+
+;; the property that op needs to satisfy if fold-left and fold-right are to return the same results...
+;; well suppose (fold-left f i s) = (fold-right f i s)
+;; then (f x y) = (foldl f x (list y)) = (foldr f x (list y)) = (f y x)
+;; therefore f is commutative
