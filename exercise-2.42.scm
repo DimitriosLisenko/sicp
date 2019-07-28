@@ -2,14 +2,18 @@
   (fold-right append '() (map proc seq)))
 
 (define (enumerate-interval lower upper)
-  (if (> lower upper)
-      '()
-      (cons lower (enumerate-interval (+ 1 lower) upper))))
+  (define (iter lower upper result)
+    (if (> lower upper)
+        result
+        (iter lower (- upper 1) (cons upper result))))
+  (iter lower upper '()))
 
 (define (list-n-elements n element)
-  (if (= n 0)
-      '()
-      (cons element (list-n-elements (- n 1) element))))
+  (define (iter n element result)
+    (if (<= n 0)
+        result
+        (iter (- n 1) element (cons element result))))
+  (iter n element '()))
 
 (define (map-only-nth-element f n list)
   (define (iter i list)
