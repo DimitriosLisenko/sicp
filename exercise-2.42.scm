@@ -97,3 +97,6 @@
 ;; then [#f is the return value of the function
 ;; and then it repeats itself again after <== to say which function did that return, presumably for recursive functions so you can match them
 ;; anyway, a backtrace would be *really* useful, but I couldn't find it yet
+
+;; also I seem to be running out of stack (and memory when running with mit-scheme --stack 10000) when running for board-size > 10
+;; we could do a pretty massive space optimization by storing the board as a list of n numbers (where n is the board-size and each number is the row on which the queen is placed)
