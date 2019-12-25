@@ -10,6 +10,7 @@
   ;; I really want to curry this, but apparently it's not a lisp thing (though there are shorthands)
   ;; also I don't technically know lambdas at this point... so just gonna have to define two functions... vom...
   ;; (define (next x m) (+ x (* m (h))))
+  ;; EDIT 2019-12-25: it most definitely is a lisp thing - just return a lambda? I guess maybe I didn't know how it works in scheme when I wrote that note above
   (define (next-one-h x) (+ x (* 1 (h))))
   (define (next-two-h x) (+ x (* 2 (h))))
   (* (/ (h) 3) (+
