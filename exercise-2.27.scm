@@ -19,3 +19,15 @@
 
 (deep-reverse (list))
 (deep-reverse (list (list)))
+
+(deep-reverse '(1 () 2)) ;; (2 () 1)
+(deep-reverse '(1 (() 2))) ;; ((2 ()) 1)
+
+;; EDIT 2019-12-30: revisited on second run through of book
+;; this says reverse each the order of elements in the outer list, and then
+;; deep-reverse each of those elements
+;; and then the null? and !pair? branches are there for elements that are not lists
+(define (deep-reverse t)
+  (cond ((null? t) t)
+        ((not (pair? t)) t)
+        (else (map deep-reverse (reverse t)))))
