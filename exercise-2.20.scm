@@ -30,3 +30,16 @@
 (same-parity)
 (same-parity 1 2 3 4 5 6 7)
 (same-parity 2 3 4 5 6 7)
+
+;; this version is after I came back to the problem on my second attempt of the book
+(define (same-parity . x)
+  (define (selector-lambda)
+    (if (even? (car x))
+        even?
+        odd?))
+  (if (null? x)
+      x
+      (filter (selector-lambda) x)))
+(same-parity)
+(same-parity 1 2 3 4 5 6 7)
+(same-parity 2 3 4 5 6 7)
