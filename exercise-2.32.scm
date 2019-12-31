@@ -10,3 +10,16 @@
          rest
          (map (lambda (x) (append (list (car s)) x)) rest)))))
 (subsets (list 1 2 3))
+
+;; EDIT 2019-12-30: used cons instead of append because it's more efficient
+(define (subsets s)
+  (if (null? s)
+      (list s)
+      (let ((rest (subsets (cdr s))))
+        (append rest
+                (map (lambda (x) (cons (car s) x))
+                     rest)))))
+(subsets (list))
+(subsets (list 1))
+(subsets (list 1 2))
+(subsets (list 1 2 3))
