@@ -6,6 +6,14 @@
       '()
       (cons lower (enumerate-interval (+ 1 lower) upper))))
 
+;; EDIT 2020-01-02: I wrote an iterative process this time around
+(define (enumerate-interval min max)
+  (define (iter min max result)
+    (if (> min max)
+        result
+        (iter min (- max 1) (cons max result))))
+  (iter min max '()))
+
 (define (ordered-triplets n)
   (flatmap
    (lambda (i)
@@ -16,6 +24,15 @@
          (enumerate-interval 1 (- j 1))))
       (enumerate-interval 1 (- i 1))))
    (enumerate-interval 1 n)))
+
+;; EDIT 2020-01-02: I changed my pretty-print style this time around
+(define (ordered-triples n)
+  (flatmap (lambda (i)
+         (flatmap (lambda (j)
+                (map (lambda (k) (list i j k))
+                     (enumerate-interval 1 (- j 1))))
+              (enumerate-interval 1 (- i 1))))
+       (enumerate-interval 1 n)))
 
 ;; now that I think about it, this can also be written recursively
 ;; give me all the ordered triplets for (- n 1) and for reach one, generate the additional results that are obtained by adding n
