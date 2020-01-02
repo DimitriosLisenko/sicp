@@ -24,6 +24,11 @@
 ;; fold-right will apply the initial as the RHS of op and the rightmost element as the LHS of op and kinda smash it rightwards
 ;; so e.g. (fold-right list '() (list 1 2 3))
 ;; can be visualised as (1 <- (2 <- (3 <- '()))) where -> is my awesome visual smash operator
+;; EDIT 2020-01-02: maybe a better explanation is that:
+;; fold-left will apply the operation starting with the initial value on the left and the left-most value in the list on the right,
+;; which becomes the new value on the left for the next left-most value
+;; fold-right will apply the operation starting with the initial value on the right and the right-most value in the list on the left,
+;; which becomes the new value on the right for the next right-most value
 
 ;; the property that op needs to satisfy if fold-left and fold-right are to return the same results...
 ;; well suppose (fold-left f i s) = (fold-right f i s)
