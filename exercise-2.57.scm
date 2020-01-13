@@ -34,6 +34,7 @@
         (else (list '** b e))))
 (define (=number? exp num) (and (number? exp) (= exp num)))
 (define (sum? x) (and (pair? x) (eq? (car x) '+)))
+;; TODO: now that I think about it, maybe support for n arguments can be implemented just in the addend and augend functions without touching make-product? not sure, just an idea
 (define (addend s) (cadr s))
 (define (augend s) (if (= (length s) 3)
                        (caddr s)
