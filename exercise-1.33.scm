@@ -1,3 +1,4 @@
+#lang sicp
 (define (filtered-accumulate-iterative filter combiner null-value term a next b)
   (define (iter a result)
     (if (> a b)

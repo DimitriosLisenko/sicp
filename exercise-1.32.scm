@@ -1,3 +1,4 @@
+#lang sicp
 (define (accumulate-iterative combiner null-value term a next b)
   (define (iter a result)
     (if (> a b)
@@ -9,7 +10,7 @@
   (if (> a b)
       null-value
       (combiner (term a)
-         (accumulate-recursive combiner null-value term (next a) next b))))
+                (accumulate-recursive combiner null-value term (next a) next b))))
 
 (define (identity x) x)
 (define (inc x) (+ x 1))
