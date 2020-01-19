@@ -1,3 +1,4 @@
+#lang sicp
 ;; (car ''abracadabra)
 ;; => (car (quote (quote abracadabra)))
 ;; EDIT 2020-01-02: the way it apparently works in the interpreter is that the FIRST occurrence of quote will quote the remaining object

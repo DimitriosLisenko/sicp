@@ -1,3 +1,4 @@
+#lang sicp
 (define (binomial-coefficient n k)
   (cond ((or (< k 0) (> k n)) 0)
         ((or (= 0 k) (= k n)) 1)

@@ -1,3 +1,4 @@
+#lang sicp
 ;; I'm defining split to satisfy the examples in the book:
 ;; (define right-split (split beside below))
 ;; (define up-split (split below beside))

@@ -1,3 +1,4 @@
+#lang sicp
 ;; looked at the documentation for loading files since it's not covered in the book yet
 (load "exercise-2.2.scm")
 

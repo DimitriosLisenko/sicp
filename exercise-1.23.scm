@@ -1,3 +1,4 @@
+#lang sicp
 (define (smallest-divisor n) (find-divisor n 2))
 (define (find-divisor n test-divisor)
   (define (next x) (if (= x 2) 3 (+ x 2)))

@@ -1,3 +1,4 @@
+#lang sicp
 ;; a) the number of times p is applies is 5:
 ;; (sine 12.15)
 ;; (p (sine 4.05))

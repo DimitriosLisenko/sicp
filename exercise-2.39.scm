@@ -1,3 +1,4 @@
+#lang sicp
 (load "exercise-2.38.scm") ;; defines fold-right and fold-left
 ;; gonna use the smashing metaphor to make it easy to visualise
 

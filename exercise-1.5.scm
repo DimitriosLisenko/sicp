@@ -1,3 +1,4 @@
+#lang sicp
 ;; applicative-order (like Scheme)
 ;; (test 0 (p))
 ;; => (test 0 (p))

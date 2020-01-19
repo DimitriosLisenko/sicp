@@ -1,3 +1,4 @@
+#lang sicp
 (define (expt b n)
   (define (square x) (* x x))
   (define (even? x) (= (remainder x 2) 0))

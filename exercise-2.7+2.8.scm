@@ -1,3 +1,4 @@
+#lang sicp
 (define (make-interval lower upper)
   (cons lower upper))
 (define (lower-bound interval)

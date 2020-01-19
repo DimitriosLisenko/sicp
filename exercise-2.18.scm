@@ -1,3 +1,4 @@
+#lang sicp
 (define (reverse lst)
   (if
    (null? lst)

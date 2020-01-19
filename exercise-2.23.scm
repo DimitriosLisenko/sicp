@@ -1,3 +1,4 @@
+#lang sicp
 (define (for-each f x)
   (cond ((null? x)
          true)

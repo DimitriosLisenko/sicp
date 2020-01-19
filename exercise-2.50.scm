@@ -1,3 +1,4 @@
+#lang sicp
 (define (flip-horiz painter)
   (transform-painter painter
                      (make-vector 1.0 0.0)

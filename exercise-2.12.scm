@@ -1,3 +1,4 @@
+#lang sicp
 (load "exercise-2.7+2.8.scm")
 
 (define (make-center-percent c p)

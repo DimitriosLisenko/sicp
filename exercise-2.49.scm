@@ -1,3 +1,4 @@
+#lang sicp
 ;; the painter that draws the outline of the designated frame
 (segments->painter
  (list

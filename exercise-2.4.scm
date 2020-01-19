@@ -1,3 +1,4 @@
+#lang sicp
 ;; the way this works is that cons returns a lambda that accepts a lambda and applies to
 ;; it the two arguments that you originally passed in (x and y)
 ;; this lambda then gets passed in to car/cdr and gets a lambda applied to it that returns x or y

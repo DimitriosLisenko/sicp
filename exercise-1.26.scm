@@ -1,3 +1,4 @@
+#lang sicp
 ;; by calling (* (...) (...) instead of (square (...)))
 ;; you're actually creating a binary tree of execution
 ;; instead of a straight line

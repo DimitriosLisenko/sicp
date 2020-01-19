@@ -1,3 +1,4 @@
+#lang sicp
 ;; assume that the total number of change is n
 ;; space complexity:
 ;; the deepest branch is the one where you use just 1 cent coins to make up n

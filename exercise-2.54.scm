@@ -1,3 +1,4 @@
+#lang sicp
 (define (equal? lst mst)
   (cond
    ((and

@@ -1,3 +1,4 @@
+#lang sicp
 (define (make-rat n d)
   (let ((g (gcd n d)))
     (cond ((or

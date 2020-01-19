@@ -1,3 +1,4 @@
+#lang sicp
 ;; this version of same-parity follows the same logic as reverse with an additional condition
 (define (same-parity . x)
   (define (correct-parity? y) (= (modulo (car x) 2) (modulo y 2)))

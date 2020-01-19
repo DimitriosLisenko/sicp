@@ -1,3 +1,4 @@
+#lang sicp
 ;; (define (f n) (A 0 n))
 ;; => (define (f n) (* 2 n))
 ;; => computes 2 * n

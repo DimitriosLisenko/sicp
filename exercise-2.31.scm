@@ -1,3 +1,4 @@
+#lang sicp
 (define (tree-map f x)
   (map
    (lambda (x)

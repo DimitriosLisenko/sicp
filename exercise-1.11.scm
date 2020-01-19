@@ -1,3 +1,4 @@
+#lang sicp
 ;; recursive procedure
 (define (i n)
   (cond ((< n 3) n)

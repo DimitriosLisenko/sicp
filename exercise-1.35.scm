@@ -1,3 +1,4 @@
+#lang sicp
 ;; φ is a solution to φ^2 = φ + 1
 ;; φ^2 = φ + 1
 ;; => φ = (φ + 1) / φ 

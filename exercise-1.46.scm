@@ -1,3 +1,4 @@
+#lang sicp
 (define (iterative-improve good-enough? improve)
   (lambda (x)
     (define (iterative-improve-internal x) (if (good-enough? x) x (iterative-improve-internal (improve x))))

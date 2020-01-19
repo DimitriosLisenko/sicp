@@ -1,3 +1,4 @@
+#lang sicp
 ;; the current implementation of good-enough? is not good for very small numbers because:
 ;; - the difference will be smaller than the tolerance after very few iterations
 ;;   e.g. (sqrt 0.00001) => .03135649010771716, which squared results in .0009832294718753643

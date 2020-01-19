@@ -1,3 +1,4 @@
+#lang sicp
 ;; x^x = 1000
 ;; => ln(x^x) = ln(1000)
 ;; => x*ln(x) = ln(1000)

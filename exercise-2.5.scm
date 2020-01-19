@@ -1,3 +1,4 @@
+#lang sicp
 ;; this works because of prime decomposition, and both 2 and 3 are primes
 ;; however, this won't work for nested cons, since the powers of two and three are going to get merged
 (define (int-pair-cons a b)

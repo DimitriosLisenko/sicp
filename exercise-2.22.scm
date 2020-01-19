@@ -1,3 +1,4 @@
+#lang sicp
 ;; the first version produces the reverse because he runs cons on the first
 ;; element of the list against answer, so it becomes the last element
 

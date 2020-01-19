@@ -1,3 +1,4 @@
+#lang sicp
 (define (stairway-division-recursive numerator-function denominator-function steps)
   (define (stairway-division-internal step)
     (if (> step steps)

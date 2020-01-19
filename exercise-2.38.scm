@@ -1,3 +1,4 @@
+#lang sicp
 (load "exercise-2.36.scm") ;; defines accumulate
 
 ;; reminds me of good old Haskell's foldl and foldr!

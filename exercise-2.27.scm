@@ -1,3 +1,4 @@
+#lang sicp
 (define (deep-reverse x)
   (define (conditional-deep-reverse x) (if (pair? x) (deep-reverse x) x))
   (define (reverse-internal res curr)

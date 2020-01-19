@@ -1,3 +1,4 @@
+#lang sicp
 (define (fringe x)
   (cond ((null? x) x) ;; fringe of an empty list is an empty list
         ((not (pair? x)) (list x)) ;; fringe of a leaf is a list containing the leaf

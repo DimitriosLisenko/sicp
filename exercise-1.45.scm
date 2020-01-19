@@ -1,3 +1,4 @@
+#lang sicp
 ;; copying this part from the book
 (define tolerance 0.00001)
 (define (fixed-point f first-guess)

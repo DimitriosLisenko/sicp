@@ -1,3 +1,4 @@
+#lang sicp
 ;; note that φ and ψ both satisfy the equation x^2 = x + 1
 ;; true for n = 0 because (φ^0 - ψ^0) / root(5) = 0
 ;; true for n = 1 because (φ^1 - ψ^1) / root(5) = root(5) / root(5) = 1

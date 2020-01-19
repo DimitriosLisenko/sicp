@@ -1,3 +1,4 @@
+#lang sicp
 (define (up-split painter n)
   (if (= n 0)
       painter

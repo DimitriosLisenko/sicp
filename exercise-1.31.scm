@@ -1,3 +1,4 @@
+#lang sicp
 (define (product-iterative term a next b)
   (define (iter a result)
     (if (> a b)

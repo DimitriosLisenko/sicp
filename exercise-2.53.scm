@@ -1,3 +1,4 @@
+#lang sicp
 (list 'a 'b 'c)
 ;; => (a b c)
 (list (list 'george))
