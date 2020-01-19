@@ -1,4 +1,12 @@
 #lang sicp
+(#%require (only racket/base
+                 print-as-expression
+                 print-pair-curly-braces
+                 print-mpair-curly-braces))
+(print-as-expression      #f)
+(print-pair-curly-braces  #t)
+(print-mpair-curly-braces #f)
+
 (define (variable? x) (symbol? x))
 (define (same-variable? v1 v2)
   (and (variable? v1) (variable? v2) (eq? v1 v2)))
