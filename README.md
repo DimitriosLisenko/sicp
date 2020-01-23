@@ -10,16 +10,25 @@ raco setup
 raco pkg install sicp
 ```
 
-The other thing that needs to be done is to prefix all files with the following snippet - it will make the language be SICP and the printer print expressions similarly to how mit-scheme would do it:
+The other thing that needs to be done is to prefix all files with the following snippet - it will make racket register the correct language:
 ```racket
 #lang sicp
-(#%require (only racket/base
-                 print-as-expression
-                 print-pair-curly-braces
-                 print-mpair-curly-braces))
+```
+
+To make the printer print expressions similarly to how mit-scheme would, place the following in the `~/.racketrc` file:
+```racket
+(require (only-in racket/base
+                  print-as-expression
+                  print-pair-curly-braces
+                  print-mpair-curly-braces))
 (print-as-expression      #f)
 (print-pair-curly-braces  #t)
 (print-mpair-curly-braces #f)
+```
+
+and the following in the `~/.racket-geiser` file:
+```racket
+(load (find-system-path 'init-file))
 ```
 
 The following aliases can come in useful:
