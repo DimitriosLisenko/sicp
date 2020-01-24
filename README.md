@@ -18,11 +18,9 @@ The other thing that needs to be done is to prefix all files with the following 
 To make the printer print expressions similarly to how mit-scheme would, place the following in the `~/.racketrc` file:
 ```racket
 (require (only-in racket/base
-                  print-as-expression
-                  print-pair-curly-braces
-                  print-mpair-curly-braces))
-(print-as-expression      #f)
-(print-pair-curly-braces  #t)
+		  print-as-expression
+		  print-mpair-curly-braces))
+(print-as-expression #f)
 (print-mpair-curly-braces #f)
 ```
 
