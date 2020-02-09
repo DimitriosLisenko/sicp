@@ -6,32 +6,7 @@
 (define (make-tree entry left right)
   (list entry left right))
 
-(define tree-2.16-left
-  (make-tree 7
-             (make-tree 3
-                        (make-tree 1 '() '())
-                        (make-tree 5 '() '()))
-             (make-tree 9
-                        '()
-                        (make-tree 11 '() '()))))
-
-(define tree-2.16-middle
-  (make-tree 3
-             (make-tree 1 '() '())
-             (make-tree 7
-                        (make-tree 5 '() '())
-                        (make-tree 9
-                                   '()
-                                   (make-tree 11 '() '())))))
-
-(define tree-2.16-right
-  (make-tree 5
-             (make-tree 3
-                        (make-tree 1 '() '())
-                        '())
-             (make-tree 9
-                        (make-tree 7 '() '())
-                        (make-tree 11 '() '()))))
+;; both tree->list functions will produce the same results because they are both in-order traversals
 
 (define (tree->list-1 tree)
   (if (null? tree)
@@ -52,10 +27,37 @@
                              result-list)))))
   (copy-to-list tree '()))
 
-;; both tree->list functions will produce the same results because they are both in-order traversals
-(tree->list-1 tree-2.16-left)
-(tree->list-2 tree-2.16-left)
-(tree->list-1 tree-2.16-middle)
-(tree->list-2 tree-2.16-middle)
-(tree->list-1 tree-2.16-right)
-(tree->list-2 tree-2.16-right)
+
+;; (define tree-2.16-left
+;;   (make-tree 7
+;;              (make-tree 3
+;;                         (make-tree 1 '() '())
+;;                         (make-tree 5 '() '()))
+;;              (make-tree 9
+;;                         '()
+;;                         (make-tree 11 '() '()))))
+
+;; (define tree-2.16-middle
+;;   (make-tree 3
+;;              (make-tree 1 '() '())
+;;              (make-tree 7
+;;                         (make-tree 5 '() '())
+;;                         (make-tree 9
+;;                                    '()
+;;                                    (make-tree 11 '() '())))))
+
+;; (define tree-2.16-right
+;;   (make-tree 5
+;;              (make-tree 3
+;;                         (make-tree 1 '() '())
+;;                         '())
+;;              (make-tree 9
+;;                         (make-tree 7 '() '())
+;;                         (make-tree 11 '() '()))))
+
+;; (tree->list-1 tree-2.16-left)
+;; (tree->list-2 tree-2.16-left)
+;; (tree->list-1 tree-2.16-middle)
+;; (tree->list-2 tree-2.16-middle)
+;; (tree->list-1 tree-2.16-right)
+;; (tree->list-2 tree-2.16-right)
