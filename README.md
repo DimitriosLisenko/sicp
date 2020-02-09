@@ -36,3 +36,9 @@ The following aliases can come in useful:
 alias scheme='racket -l sicp --repl'
 alias mit-scheme='racket -l sicp --repl'
 ```
+
+Another thing I noticed is that MIT scheme's "load" function doesn't work - have to use this instead:
+```racket
+(#%require racket/include)
+(include "FILENAME")
+```
