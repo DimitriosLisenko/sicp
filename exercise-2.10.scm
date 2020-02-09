@@ -1,5 +1,8 @@
 #lang sicp
-(load "exercise-2.7+2.8.scm")
+
+(#%require racket/include)
+(include "exercise-2.7-2.8.scm")
+
 (define (div-interval x y)
   (if (and (<= (lower-bound y) 0) (>= (upper-bound y) 0))
       (error "Attempting to divide by an interval that spans 0")

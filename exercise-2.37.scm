@@ -1,5 +1,7 @@
 #lang sicp
-(load "exercise-2.36.scm") ;; defines accumulate and accumulate-n
+
+(#%require racket/include)
+(include "exercise-2.36.scm") ;; defines accumulate and accumulate-n
 
 (define (dot-product v w)
   (accumulate + 0 (map * v w)))
