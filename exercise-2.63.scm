@@ -1,5 +1,7 @@
 #lang sicp
 
+(#%provide tree->list-1 tree->list-2)
+
 (define (entry tree) (car tree))
 (define (left-branch tree) (cadr tree))
 (define (right-branch tree) (caddr tree))

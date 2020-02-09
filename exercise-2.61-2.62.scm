@@ -1,5 +1,10 @@
 #lang sicp
 
+(#%provide ordered-list/element-of-set?
+           ordered-list/intersection-set
+           ordered-list/adjoin-set
+           ordered-list/union-set)
+
 (define (ordered-list/element-of-set? x set)
   (cond ((null? set) false)
         ((= x (car set)) true)
