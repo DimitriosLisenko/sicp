@@ -39,6 +39,10 @@ alias mit-scheme='racket -l sicp --repl'
 
 Another thing I noticed is that MIT scheme's "load" function doesn't work - have to use this instead:
 ```racket
-(#%require racket/include)
-(include "FILENAME")
+;; in the file that provides a function
+(#%provide FUNCTION_NAME_ONE
+           FUNCTION_NAME_TWO)
+
+;; in the file that uses the above functions
+(#%require "FILENAME")
 ```
