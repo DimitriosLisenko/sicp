@@ -1,6 +1,7 @@
 #lang sicp
 
 ;; (#%require racket/trace) ;; this is for debugging purposes and lets you trace a function call
+;; next time try errortrace: https://docs.racket-lang.org/errortrace/using-errortrace.html
 
 (define (make-record key name)
   (list key name))
