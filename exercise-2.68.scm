@@ -2,6 +2,8 @@
 
 (#%require "exercise-2.67.scm")
 
+(#%provide encode)
+
 (define sample-tree
   (make-code-tree (make-leaf 'A 4)
                   (make-code-tree
@@ -25,6 +27,6 @@
              (cons 0 (encode-symbol symbol (left-branch tree))))
             ((member symbol (symbols (right-branch tree)))
              (cons 1 (encode-symbol symbol (right-branch tree))))
-            (else (error "bad symbol: ENCODE-SYMBOL")))))
+            (else (error "bad symbol: ENCODE-SYMBOL" symbol)))))
 
 (equal? sample-encoded-message (encode sample-decoded-message sample-tree)) ; #t
