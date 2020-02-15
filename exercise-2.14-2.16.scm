@@ -1,6 +1,8 @@
 #lang sicp
-(load "exercise-2.7+2.8.scm")
-(load "exercise-2.12.scm")
+
+(#%require racket/include)
+(include "exercise-2.7-2.8.scm")
+(include "exercise-2.12.scm")
 
 (define (par1 r1 r2)
   (div-interval (mul-interval r1 r2)

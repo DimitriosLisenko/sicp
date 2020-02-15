@@ -1,5 +1,8 @@
 #lang sicp
-(load "exercise-2.38.scm") ;; defines fold-right and fold-left
+
+(#%require racket/include)
+(include "exercise-2.38.scm") ;; defines fold-right and fold-left
+
 ;; gonna use the smashing metaphor to make it easy to visualise
 
 (reverse (list 1 2 3 4 5 6))

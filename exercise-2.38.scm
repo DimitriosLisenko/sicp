@@ -1,5 +1,7 @@
 #lang sicp
-(load "exercise-2.36.scm") ;; defines accumulate
+
+(#%require racket/include)
+(include "exercise-2.36.scm") ;; defines accumulate
 
 ;; reminds me of good old Haskell's foldl and foldr!
 ;; there's a really neat pictorial explanation here: https://wiki.haskell.org/Fold
