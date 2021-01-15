@@ -5,7 +5,7 @@ The documentation can be found here: https://docs.racket-lang.org/sicp-manual/in
 
 In order to install it on Mac OS, I did the following:
 ```bash
-brew cask install racket
+brew install --cask racket
 raco setup
 raco pkg install sicp
 ```
