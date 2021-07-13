@@ -44,3 +44,11 @@ Another thing I noticed is that MIT scheme's "load" function doesn't work - have
 ;; in the file that uses the above functions
 (#%require "FILENAME")
 ```
+
+# Editor
+Using emacs for its tight integration with various lisps.
+
+## Useful plugins
+[Geiser](http://www.nongnu.org/geiser/geiser_3.html#The-REPL): lets you run Racket code from the editor.
+
+[smartparens](https://github.com/Fuco1/smartparens): minor mode for dealing with pairs, similar to paredit.
