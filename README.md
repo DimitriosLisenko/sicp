@@ -52,3 +52,5 @@ Using emacs for its tight integration with various lisps.
 [Geiser](http://www.nongnu.org/geiser/geiser_3.html#The-REPL): lets you run Racket code from the editor.
 
 [smartparens](https://github.com/Fuco1/smartparens): minor mode for dealing with pairs, similar to paredit.
+
+[rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters): color matching parentheses in a unique colour for easier identification.
