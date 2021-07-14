@@ -17,7 +17,7 @@ The other thing that needs to be done is to prefix all files with the following 
 
 To make the printer print expressions similarly to how mit-scheme would, place the following in the `~/.racketrc` file:
 ```racket
-(#%require (only racket/base
+(require (only-in racket/base
 		  print-as-expression
 		  print-mpair-curly-braces))
 (print-as-expression #f)
@@ -27,12 +27,6 @@ To make the printer print expressions similarly to how mit-scheme would, place t
 and the following in the `~/.racket-geiser` file:
 ```racket
 (load (find-system-path 'init-file))
-```
-
-The following aliases can come in useful:
-```bash
-alias scheme='racket -l sicp --repl'
-alias mit-scheme='racket -l sicp --repl'
 ```
 
 Another thing I noticed is that MIT scheme's "load" function doesn't work - have to use this instead:
