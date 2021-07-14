@@ -54,3 +54,7 @@ Using emacs for its tight integration with various lisps.
 [smartparens](https://github.com/Fuco1/smartparens): minor mode for dealing with pairs, similar to paredit.
 
 [rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters): color matching parentheses in a unique colour for easier identification.
+
+## Running code
+On first run, call `C-c C-a` - this evaluates the whole buffer, including the `#lang sicp` definition.
+From that point onwards, individual lines can be evaluated using `C-M-x`.
