@@ -57,4 +57,5 @@ Using emacs for its tight integration with various lisps.
 
 ## Running code
 On first run, call `C-c C-a` - this evaluates the whole buffer, including the `#lang sicp` definition.
+
 From that point onwards, individual lines can be evaluated using `C-M-x`.
