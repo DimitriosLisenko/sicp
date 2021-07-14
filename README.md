@@ -17,7 +17,7 @@ The other thing that needs to be done is to prefix all files with the following 
 
 To make the printer print expressions similarly to how mit-scheme would, place the following in the `~/.racketrc` file:
 ```racket
-(require (only-in racket/base
+(#%require (only racket/base
 		  print-as-expression
 		  print-mpair-curly-braces))
 (print-as-expression #f)
@@ -44,3 +44,13 @@ Another thing I noticed is that MIT scheme's "load" function doesn't work - have
 ;; in the file that uses the above functions
 (#%require "FILENAME")
 ```
+
+# Editor
+Using emacs for its tight integration with various lisps.
+
+## Useful plugins
+[Geiser](https://www.nongnu.org/geiser/): lets you run Racket code from the editor.
+
+[smartparens](https://github.com/Fuco1/smartparens): minor mode for dealing with pairs, similar to paredit.
+
+[rainbow-delimiters](https://github.com/Fanael/rainbow-delimiters): color matching parentheses in a unique colour for easier identification.
